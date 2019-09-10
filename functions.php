@@ -23,3 +23,20 @@ function child_enqueue_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
+
+// Add content to astra_header_before()
+// this adds the title to the blog page
+add_action( 'astra_primary_content_top', 'tc_add_blog_title' );
+function tc_add_blog_title() {
+	if ( is_home() ){
+	ob_start();
+	?>
+      <header class="entry-header ast-no-thumbnail ast-no-meta blog-header">
+		<h1 class="entry-title" itemprop="headline">Blog</h1>
+	</header>
+<?php
+	$output = ob_get_clean();
+	wp_reset_postdata();
+	echo $output;
+	}
+ }

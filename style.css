@@ -147,18 +147,20 @@ ul.sub-menu a.menu-link {
 	filter:grayscale(0);
 }
 
-
-/* add title to the blog page */
-body.blog .ast-row:before {
-    content:'Blog';
-    font-size:30px;
-    padding:0 3em;
-    
+.blog-header {
+    padding:1em 6.6em 0;
 }
 
-.entry-header .entry-title {
+.blog-header > h1.entry-title{
+    border-bottom:black thin solid;
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-decoration:none;
+}
+
+article > .entry-header .entry-title {
     font-weight:bold;
-    text-decoration:underline;
+    border-bottom:black thin solid;
 }
 
 .ast-separate-container .ast-article-post:first-child, .ast-separate-container .ast-article-single:first-child{
