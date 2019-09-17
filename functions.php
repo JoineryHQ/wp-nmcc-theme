@@ -26,7 +26,7 @@ add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
 
 // Add content to astra_header_before()
 // this adds the title to the blog page
-add_action( 'astra_primary_content_top', 'tc_add_blog_title' );
+/*add_action( 'astra_primary_content_top', 'tc_add_blog_title' );
 function tc_add_blog_title() {
 	if ( is_home() ){
 	ob_start();
@@ -39,4 +39,4 @@ function tc_add_blog_title() {
 	wp_reset_postdata();
 	echo $output;
 	}
- }
+ }*/
