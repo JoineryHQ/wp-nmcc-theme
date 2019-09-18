@@ -95,6 +95,13 @@ ul.sub-menu a.menu-link {
 	padding-right: 25px;
 }
 
+/* page header styles */
+
+.ast-advanced-headers-layout {
+    border: 1px solid #cfcfd1;
+    border-width: 1px 0;
+}
+
 /* widget sidebar styles */
 
 .widget ul {
