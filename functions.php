@@ -40,3 +40,19 @@ function tc_add_blog_title() {
 	echo $output;
 	}
  }*/
+
+ 
+ // Adds Read More text to Resource Links URL custom field
+ // Content Views Pro - disable auto convert url to link
+add_filter( 'pt_cv_wrap_ctf_value', '__return_false' );
+
+// Content Views Pro - Set custom text for an URL custom field
+add_filter( 'pt_cv_ctf_value', 'cvp_theme_ctf_url_custom_text', 100, 3 );
+function cvp_theme_ctf_url_custom_text( $url, $key, $post ) {
+
+	if ( $key === 'tc_website' ) {
+		$url = '<a href="' . $url . '">Read More</a>';
+	}
+
+	return $url;
+}
