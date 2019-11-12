@@ -42,7 +42,9 @@ function tc_add_blog_title() {
  }*/
 
  
- // Adds Read More text to Resource Links URL custom field
+ /**
+  * Adds Read More text to Resource Links URL custom field
+ */
  // Content Views Pro - disable auto convert url to link
 add_filter( 'pt_cv_wrap_ctf_value', '__return_false' );
 
@@ -51,8 +53,19 @@ add_filter( 'pt_cv_ctf_value', 'cvp_theme_ctf_url_custom_text', 100, 3 );
 function cvp_theme_ctf_url_custom_text( $url, $key, $post ) {
 
 	if ( $key === 'tc_website' ) {
-		$url = '<a href="' . $url . '">Read More</a>';
+		$url = '<a href="' . $url . '" target="_blank">Read More</a>';
 	}
 
 	return $url;
+}
+
+// Content Views Pro - use custom field value as custom link
+add_filter( 'pt_cv_field_href', 'tc_cvp_theme_use_custom_url_by_customfield', 100, 2 );
+function tc_cvp_theme_use_custom_url_by_customfield( $href, $post ) {
+	$custom_url = get_post_meta( $post->ID, 'tc_website', true );
+	if ( $custom_url ) {
+		$href = $custom_url;
+	}
+
+	return $href;
 }
