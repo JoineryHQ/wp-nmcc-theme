@@ -1,6 +1,6 @@
 /**
 Theme Name: NMCC
-Author: Tadpole Collective
+Author: Tadpole Collective, modified by Joinery
 Author URI: https://tadpole.cc
 Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
 Version: 1.0
@@ -37,7 +37,7 @@ a.menu-link:hover{
 }
 
 #primary-menu > li:last-child:after{
-    background-color:#ef3c40;   
+    background-color:#ef3c40;
     content:"";
     height:100%;
     width:100%;
@@ -60,7 +60,7 @@ a.menu-link:hover{
 #fp-mailinglist {
     border-top: 4px solid #f4db78;
     margin-top: 10px;
-    padding: 40px 0 20px;
+    padding: 40px 20px;
     position:relative;
 }
 
@@ -177,13 +177,90 @@ article > .entry-header .entry-title {
 @media (max-width:1199px){
 	body.blog .ast-row:before {
     padding:0 1em;
-    
+
 }
 }
 
 @media (max-width:544px){
 	body.blog .ast-row:before {
     padding:0 .5em;
-    
+
 }
+}
+
+/**
+ * We want to hide some elements on the One User Avatar screens, because they
+ * provide functionality that's not relevant to our use case, and so would be
+ * confusing for users.
+ */
+p#wpua-thumbnail-existing {
+  display: none;
+}
+p#wpua-preview-existing img {
+  max-height: none;
+}
+p#wpua-remove-button-existing,
+p#wpua-undo-button-existing {
+  visibility: hidden;
+  height: 0px;
+}
+
+/* Add a background color for active main menu links. */
+ul#primary-menu li.current-menu-item a.menu-link {
+  background-color: #ddd;
+}
+ul#primary-menu li.current-menu-item a.menu-link:hover {
+  background-color: #ef3c40;
+}
+
+/* colors for status icons */
+div.nmregistry-status.nmregistry-status-error i.crm-i {
+  color: red;
+}
+div.nmregistry-status.nmregistry-status-warning i.crm-i {
+  color: orange;
+}
+div.nmregistry-status.nmregistry-status-success i.crm-i {
+  color: green;
+}
+
+/* on the front-end, hide "contact summary overlay" column in profile search results */
+div.crm-public div.crm-search-results > table > tbody > tr td:first,
+div.crm-public div.crm-search-results > table > tbody > tr th:first {
+  display: none;
+}
+
+/* Distinguish wpbb-warning from wpbb-error */
+.wppb-warning {
+  background: lightyellow !important;
+  border-color: goldenrod !important;
+}
+
+/* font sizes on listing view. */
+div#nmregistry-profile-view div.help,
+#crm-container.crm-public div#nmregistry-profile-view div.label,
+#crm-container.crm-public div#nmregistry-profile-view div.content {
+  font-size: 1em;
+}
+/* label style on listing view. */
+#crm-container.crm-public div#nmregistry-profile-view div.label {
+  font-weight: bold;
+  width: 30%;
+}
+/* field value style on listing view. */
+#crm-container.crm-public div#nmregistry-profile-view div.content {
+  margin-left: 32%
+}
+/* more space around avatar*/
+div#nmregistry-user-avatar {
+  margin-bottom: 1em;
+}
+/* more space between listing data and action links */
+div#nmregistry-profile-view {
+  margin-bottom: 2em;
+}
+/* more space between listing data and action links */
+div#crm-profile-block div.crm-section.helprow-post div.content {
+  padding-top: 0px;
+  padding-bottom: 12px;
 }
