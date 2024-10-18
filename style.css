@@ -264,3 +264,9 @@ div#crm-profile-block div.crm-section.helprow-post div.content {
   padding-top: 0px;
   padding-bottom: 12px;
 }
+/* button alignment, e.g. homepage */
+.nmcc-home-button-wrapper {
+    float: left;
+    margin-right: 1em;
+}
+
