@@ -259,6 +259,39 @@ div#nmregistry-user-avatar {
 div#nmregistry-profile-view {
   margin-bottom: 2em;
 }
+
+/* styles for background check badge */
+div#nmregistry-profile-view div#nmregistry-profile-view-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+div#nmregistry-profile-view img#nmregistry-profile-background-check-badge {
+  width: 200px;
+}
+/* styles for background check badge "help" icon" */
+div#nmregistry-profile-view span#nmregistry-profile-background-check-badge-help a {
+  vertical-align: top;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  transition: top .25s, right .25s;
+}
+div#nmregistry-profile-view span#nmregistry-profile-background-check-badge-help a:hover {
+  top: -3px;
+  right: 3px;
+  transition: top .25s, right .25s;
+}
+div#nmregistry-profile-view span#nmregistry-profile-background-check-badge-help a img {
+  width: 25px;
+  transition: .25s;
+}
+div#nmregistry-profile-view span#nmregistry-profile-background-check-badge-help a:hover img {
+  width: 31px;
+  transition: .25s;
+}
+
 /* more space between listing data and action links */
 div#crm-profile-block div.crm-section.helprow-post div.content {
   padding-top: 0px;
@@ -269,4 +302,3 @@ div#crm-profile-block div.crm-section.helprow-post div.content {
     float: left;
     margin-right: 1em;
 }
-
