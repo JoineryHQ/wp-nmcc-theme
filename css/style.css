@@ -279,7 +279,8 @@ div#nmregistry-profile-view a#nmregistry-profile-background-check-badge-wrapper 
   width: 25px;
   transition: top .25s, right .25s, width .25s;
 }
-div#nmregistry-profile-view a#nmregistry-profile-background-check-badge-wrapper:hover img#nmregistry-profile-background-check-badge-help {
+div#nmregistry-profile-view a#nmregistry-profile-background-check-badge-wrapper:hover img#nmregistry-profile-background-check-badge-help,
+div#nmregistry-profile-view a#nmregistry-profile-background-check-badge-wrapper:focus img#nmregistry-profile-background-check-badge-help {
   top: -3px;
   right: 3px;
   width: 31px;
