@@ -1,0 +1,25 @@
+/** These styles are included when the URL contains ?lightbox=[any true value] */
+html {
+  margin-top: 0px !important;
+}
+div#primary {
+  margin: 2em 0 !important;
+  padding: 0 !important;
+}
+main#main > article {
+  margin: 0px !important;
+  padding: 1em !important;
+}
+
+body > * {
+  display: none;
+}
+body > div#page {
+  display: block;
+}
+body > div#page > * {
+  display: none;
+}
+body > div#page > div#content {
+  display: block;
+}
