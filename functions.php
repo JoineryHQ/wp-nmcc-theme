@@ -25,7 +25,7 @@ function child_enqueue_styles() {
 add_action('wp_enqueue_scripts', 'child_enqueue_styles', 15);
 
 add_filter('the_content', function ($content) {
-  if (!empty($_GET['lightbox']) && is_singular()) {
+  if (!empty($_GET['lightbox'] && empty($_GET['lightbox-nolink'])) && is_singular()) {
     // If page is viewed in a lightbox (per url query params), append a break-out link.
     $title = get_the_title();
     $url   = esc_url(remove_query_arg('lightbox'));
